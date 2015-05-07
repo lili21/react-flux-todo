@@ -1,0 +1,17 @@
+{
+  "name": "react flux todo",
+  "version": "0.0.2",
+  "description": "learn react + flux",
+  "dependencies": {
+    "css-loader": "~0.12.0",
+    "flux": "^2.0.3",
+    "lodash": "^3.8.0",
+    "react": "^0.13.2",
+    "style-loader": "~0.12.1"
+  },
+  "devDependencies": {
+    "jsx-loader": "~0.13.2",
+    "webpack": "^1.8.11",
+    "webpack-dev-server": "^1.8.2"
+  }
+}
