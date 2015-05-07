@@ -62,6 +62,7 @@ TodoDispatcher.register(function(action) {
       break;
     case 'remove':
       TodoStore.remove(action.index);
+      break;
     case 'toggleCompleted':
       TodoStore.toggleCompleted(action.index);
       break;

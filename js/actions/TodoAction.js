@@ -5,7 +5,6 @@ var TodoWebApi = require('../utils/TodoWebApi');
 
 var TodoAction = {
   add: function(item) {
-    console.log(item);
     TodoDispatcher.dispatch({
       eventName: 'add',
       newItem: item

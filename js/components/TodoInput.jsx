@@ -9,8 +9,6 @@ var TodoInput = React.createClass({
     if (e.keyCode === 13) {
       item = React.findDOMNode(this.refs.item).value.trim();
       React.findDOMNode(this.refs.item).value = '';
-      console.debug('addItem');
-      // debugger
       TodoAction.add({id: guid(), text: item, completed: false});
     }
   },
