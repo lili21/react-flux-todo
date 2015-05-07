@@ -17,3 +17,5 @@ or DIY
 - Flux
 [reflux](https://github.com/spoike/refluxjs)
 or DIY
+- ImmutableJS
+or Object.freeze ???
