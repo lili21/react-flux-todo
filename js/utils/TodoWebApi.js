@@ -15,7 +15,7 @@ var TodoWebApi = {
     return _.clone(todos, true);
   },
   addTodo: function(todo) {
-    todos.push(todo);
+    todos.push(_.clone(todo));
     ls();
   },
   removeTodo: function(index) {
