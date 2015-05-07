@@ -25,6 +25,11 @@ var TodoWebApi = {
   toggleCompleted: function(index) {
     todos[index].completed = !todos[index].completed;
     ls();
+  },
+  update: function(index, text) {
+    todos[index].text = text;
+    todos[index].completed = false;
+    ls();
   }
 };
 function ls() {

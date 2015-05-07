@@ -84,7 +84,7 @@ input[type="checkbox"] {
 }
 
 .todo__new,
-.edit {
+.todo__edit {
   position: relative;
   margin: 0;
   width: 100%;
@@ -163,14 +163,14 @@ label[for='toggle-all'] {
   padding: 0;
 }
 
-.todo__list li.editing .edit {
+.todo__list li.editing .todo__edit {
   display: block;
   width: 506px;
   padding: 13px 17px 12px 17px;
   margin: 0 0 0 43px;
 }
 
-.todo__list li.editing .view {
+.todo__list li.editing .todo__view {
   display: none;
 }
 
@@ -238,7 +238,7 @@ label[for='toggle-all'] {
   display: block;
 }
 
-.todo__list li .edit {
+.todo__list li .todo__edit {
   display: none;
 }
 

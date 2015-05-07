@@ -1,6 +1,6 @@
 'use strict';
 
-var TodoDispatcher = require('../dispatchers/TodoDispatcher');
+var TodoDispatcher = require('../dispatcher/TodoDispatcher');
 var TodoWebApi = require('../utils/TodoWebApi');
 
 var TodoAction = {
@@ -32,6 +32,14 @@ var TodoAction = {
       index: index
     });
     TodoWebApi.toggleCompleted(index);
+  },
+  update: function(index, text) {
+    TodoDispatcher.dispatch({
+      eventName: 'update',
+      index: index,
+      text: text
+    });
+    TodoWebApi.update(index, text);
   }
 };
 

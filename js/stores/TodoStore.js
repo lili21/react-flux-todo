@@ -1,5 +1,5 @@
 'use strict';
-var TodoDispatcher = require('../dispatchers/TodoDispatcher');
+var TodoDispatcher = require('../dispatcher/TodoDispatcher');
 var EventEmitter = require('events').EventEmitter;
 
 /*
@@ -37,6 +37,12 @@ TodoStore.toggleCompleted = function(index) {
   this.emit('change');
 };
 
+TodoStore.update = function(index, text) {
+  items[index].text = text;
+  items[index].completed = false;
+  this.emit('change');
+};
+
 TodoStore.init = function(todos) {
   items = todos;
   this.emit('change');
@@ -58,6 +64,8 @@ TodoDispatcher.register(function(action) {
       TodoStore.remove(action.index);
     case 'toggleCompleted':
       TodoStore.toggleCompleted(action.index);
+    case 'update':
+      TodoStore.update(action.index, action.text);
     default:
       break;
   }
