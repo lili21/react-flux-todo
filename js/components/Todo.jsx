@@ -14,7 +14,6 @@ var TodoApp = React.createClass({
   componentDidMount: function() {
     var _this = this;
     TodoStore.on('change', function() {
-      // console.debugger('ccc');
       _this.setState({items: TodoStore.getItems()});
     });
   },

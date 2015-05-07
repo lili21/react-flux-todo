@@ -1,6 +1,6 @@
 'use strict';
 var React = require('react');
-var cx = require('../utils/cx');
+var cx = require('../utils/util').cx;
 
 var TodoAction = require('../actions/TodoAction');
 
@@ -13,6 +13,7 @@ var TodoItem = React.createClass({
   },
   _toggleCompleted: function(index) {
     TodoAction.toggleCompleted(index);
+    // console.log(index);
   },
   _editing: function() {
     this.setState({editing: true});

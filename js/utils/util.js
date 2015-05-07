@@ -1,6 +1,8 @@
-'use strict'
+'use strict';
 
-function cx(classNames) {
+var util = {};
+
+util.cx = function(classNames) {
   var names = '';
 
   if (typeof classNames == 'object') {
@@ -22,6 +24,16 @@ function cx(classNames) {
   }
 
   return names.trim();
-}
+};
 
-module.exports = cx;
+util.guid = function() {
+  function s4() {
+    return Math.floor((1 + Math.random()) * 0x10000)
+      .toString(16)
+      .substring(1);
+  }
+  return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+    s4() + '-' + s4() + s4() + s4();
+};
+
+module.exports = util;

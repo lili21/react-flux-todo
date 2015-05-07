@@ -1,6 +1,6 @@
 'use strict';
 var React = require('react');
-var cx = require('../utils/cx');
+var cx = require('../utils/util').cx;
 
 var TodoRoute = React.createClass({
   render: function() {
