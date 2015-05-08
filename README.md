@@ -9,8 +9,6 @@ webpack-dev-server
 ```
 
 #Todoish
-- ES6 Style
-[babeljs](https://babeljs.io/)
 - Router
 [react-router](https://github.com/rackt/react-router)
 or DIY
