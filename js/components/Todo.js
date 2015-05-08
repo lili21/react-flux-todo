@@ -3,9 +3,9 @@ var TodoStore = require('../stores/TodoStore');
 var TodoAction = require('../actions/TodoAction');
 
 
-var TodoInput = require('./TodoInput.jsx');
-var TodoList = require('./TodoList.jsx');
-var TodoRoute = require('./TodoRoute.jsx');
+var TodoInput = require('./TodoInput');
+var TodoList = require('./TodoList');
+var TodoRoute = require('./TodoRoute');
 
 var TodoApp = React.createClass({
   getInitialState: function() {

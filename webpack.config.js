@@ -1,6 +1,6 @@
 module.exports = {
   context: __dirname + '/js',
-  entry: './main.jsx',
+  entry: './main.js',
   output: {
     // path: ,
     path: __dirname + '/js',
@@ -8,8 +8,8 @@ module.exports = {
   },  
   module: {
     loaders: [
-      { test: /\.css$/, loader: 'style!css' },
-      { test: /\.jsx$/, loader: 'jsx-loader'}
+      {test: /\.css$/, loader: 'style!css'},
+      {test: /\.js$/, exclude: /node_modules/, loaders: ['jsx-loader', 'babel-loader']}
     ]
   }
 };
