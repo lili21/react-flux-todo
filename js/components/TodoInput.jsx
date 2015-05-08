@@ -5,11 +5,11 @@ var guid = require('../utils/util').guid;
 
 var TodoInput = React.createClass({
   handleChange: function(e) {
-    var item;
+    var text;
     if (e.keyCode === 13) {
-      item = React.findDOMNode(this.refs.item).value.trim();
+      text = React.findDOMNode(this.refs.item).value.trim();
       React.findDOMNode(this.refs.item).value = '';
-      TodoAction.add({id: guid(), text: item, completed: false});
+      text && TodoAction.add({id: guid(), text: text, completed: false});
     }
   },
   render: function() {

@@ -12,9 +12,7 @@ var TodoItem = React.createClass({
     TodoAction.remove(index);
   },
   _toggleCompleted: function(index) {
-    console.log(index);
     TodoAction.toggleCompleted(index);
-    // console.log(index);
   },
   _editing: function() {
     this.setState({editing: true});
