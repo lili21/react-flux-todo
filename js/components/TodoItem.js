@@ -1,10 +1,10 @@
 'use strict';
-var React = require('react');
-var cx = require('../utils/util').cx;
+let React = require('react');
+let cx = require('../utils/util').cx;
 
-var TodoAction = require('../actions/TodoAction');
+let TodoAction = require('../actions/TodoAction');
 
-var TodoItem = React.createClass({
+let TodoItem = React.createClass({
   getInitialState: function() {
     return {editing: false};
   },
@@ -18,7 +18,7 @@ var TodoItem = React.createClass({
     this.setState({editing: true});
   },
   _change: function(index, e) {
-    var text;
+    let text;
     if (e.keyCode === 13) {
       text = e.target.value;
       // console.log(text);

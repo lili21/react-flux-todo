@@ -5,7 +5,7 @@ module.exports = {
     // path: ,
     path: __dirname + '/js',
     filename: 'app.js'
-  },  
+  },
   module: {
     loaders: [
       {test: /\.css$/, loader: 'style!css'},

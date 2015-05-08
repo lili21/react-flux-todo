@@ -1,15 +1,15 @@
 'use strict';
-var _ = require('lodash');
+let _ = require('lodash');
 // var AppAction = require('../actions/AppAction');
 // 循环依赖， 
 // var TodoAction = TodoAction || require('../actions/TodoAction');
 // console.log(_);
-var todos = [];
+let todos = [];
 
-var TodoWebApi = {
+let TodoWebApi = {
   getAllTodos: function(type) {
     todos = JSON.parse(localStorage.getItem('todos')) || [];
-    todos = type ? todos.filter(function(t) {
+    todos = type ? todos.filter(t => {
       return type === 'active' ? !t.completed : t.completed; 
     }) : todos;
     return _.clone(todos, true);
@@ -32,7 +32,7 @@ var TodoWebApi = {
     ls();
   }
 };
-function ls() {
+let ls = () => {
   localStorage.setItem('todos', JSON.stringify(todos));
 }
 module.exports = TodoWebApi;

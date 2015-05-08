@@ -1,11 +1,10 @@
 'use strict';
-var React = require('react');
-var TodoItem = require('./TodoItem');
-var TodoList = React.createClass({
+let React = require('react');
+let TodoItem = require('./TodoItem');
+let TodoList = React.createClass({
   render: function() {
-    var _this = this;
-    var items = this.props.items;
-    var itemNode = items.map(function(item, index) {
+    let items = this.props.items;
+    let itemNode = items.map((item, index) => {
       return (
         <TodoItem key={index} item={item} index={index}/>
       )

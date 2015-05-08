@@ -1,12 +1,12 @@
 'use strict';
 
 require('../css/style.css');
-var React = require('react');
-var Todo = require('./components/Todo');
+let React = require('react');
+let Todo = require('./components/Todo');
 
-var TodoAction = require('./actions/TodoAction');
+let TodoAction = require('./actions/TodoAction');
 
-var render = (route) => {
+let render = (route) => {
   TodoAction.receiveAll(route);
   React.render(<Todo route={route} />, document.getElementById('todoapp'));
 };
@@ -23,6 +23,6 @@ c.addEventListener('click', function(e) {
 render(global.location.hash.substr(2));
 
 
-global.addEventListener('hashchange', function(e) {
+global.addEventListener('hashchange', () => {
   render(global.location.hash.substr(2));
 });

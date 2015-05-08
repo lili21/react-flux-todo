@@ -1,6 +1,6 @@
 'use strict';
-var Dispatcher = require('flux').Dispatcher;
+let Dispatcher = require('flux').Dispatcher;
 
-var TodoDispatcher = new Dispatcher();
+let TodoDispatcher = new Dispatcher();
 
 module.exports = TodoDispatcher;

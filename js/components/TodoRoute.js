@@ -1,8 +1,8 @@
 'use strict';
-var React = require('react');
-var cx = require('../utils/util').cx;
+let React = require('react');
+let cx = require('../utils/util').cx;
 
-var TodoRoute = React.createClass({
+let TodoRoute = React.createClass({
   render: function() {
     return (
       <footer className="todo__footer">

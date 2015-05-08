@@ -1,9 +1,9 @@
 'use strict';
 
-var TodoDispatcher = require('../dispatcher/TodoDispatcher');
-var TodoWebApi = require('../utils/TodoWebApi');
+let TodoDispatcher = require('../dispatcher/TodoDispatcher');
+let TodoWebApi = require('../utils/TodoWebApi');
 
-var TodoAction = {
+let TodoAction = {
   add: function(item) {
     TodoDispatcher.dispatch({
       eventName: 'add',
@@ -12,7 +12,7 @@ var TodoAction = {
     TodoWebApi.addTodo(item);
   },
   receiveAll: function(type) {
-    var todos = TodoWebApi.getAllTodos(type);
+    let todos = TodoWebApi.getAllTodos(type);
     TodoDispatcher.dispatch({
       eventName: 'receive',
       todos: todos

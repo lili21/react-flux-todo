@@ -1,19 +1,19 @@
 'use strict';
 
-var util = {};
+let util = {};
 
-util.cx = function(classNames) {
-  var names = '';
+util.cx = classNames => {
+  let names = '';
 
   if (typeof classNames == 'object') {
-    for (var name in classNames) {
+    for (let name in classNames) {
       if (!classNames.hasOwnProperty(name) || !classNames[name]) {
         continue;
       }
       names += name + ' ';
     }
   } else {
-    for (var i = 0; i < arguments.length; i++) {
+    for (let i = 0; i < arguments.length; i++) {
       // We should technically exclude 0 too, but for the sake of backward
       // compat we'll keep it (for now)
       if (arguments[i] == null) {
@@ -26,8 +26,8 @@ util.cx = function(classNames) {
   return names.trim();
 };
 
-util.guid = function() {
-  function s4() {
+util.guid = () => {
+  let s4 = () => {
     return Math.floor((1 + Math.random()) * 0x10000)
       .toString(16)
       .substring(1);

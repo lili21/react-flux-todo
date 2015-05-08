@@ -1,11 +1,11 @@
 'use strict';
-var React = require('react');
-var TodoAction = require('../actions/TodoAction');
-var guid = require('../utils/util').guid;
+let React = require('react');
+let TodoAction = require('../actions/TodoAction');
+let guid = require('../utils/util').guid;
 
-var TodoInput = React.createClass({
+let TodoInput = React.createClass({
   handleChange: function(e) {
-    var text;
+    let text;
     if (e.keyCode === 13) {
       text = React.findDOMNode(this.refs.item).value.trim();
       React.findDOMNode(this.refs.item).value = '';
