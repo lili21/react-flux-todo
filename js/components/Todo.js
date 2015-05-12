@@ -8,24 +8,25 @@ let TodoList = require('./TodoList');
 let TodoRoute = require('./TodoRoute');
 
 let TodoApp = React.createClass({
+  _changeHandle: function() {
+    this.setState({items: TodoStore.getItems()});
+  },
   getInitialState: function() {
     return {items: TodoStore.getItems()};
   },
   componentDidMount: function() {
-    // let _this = this;
-    TodoStore.on('change', () => {
-      this.setState({items: TodoStore.getItems()});
-    });
+    TodoStore.on('change', this._changeHandle);
   },
-  componentWillUnMoint: function() {
-    TodoStore.removeListener('change');
+  componentWillUnmount: function() {
+    TodoStore.removeListener('change', this._changeHandle);
   },
   render: function() {
+    let router = this.props.params.router || 'all';
     return (
       <div>
         <TodoInput />
         <TodoList items={this.state.items} />
-        <TodoRoute count={this.state.items.length} now={this.props.route} />
+        <TodoRoute count={this.state.items.length} now={router} />
       </div>
     )
   }

@@ -13,7 +13,7 @@ let TodoRoute = React.createClass({
           <li>
             <a
               href="#/"
-              className={cx({selected: this.props.now === ''})}>
+              className={cx({selected: this.props.now === 'all'})}>
                 All
             </a>
           </li>
