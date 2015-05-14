@@ -7,29 +7,20 @@ let TodoInput = require('./TodoInput');
 let TodoList = require('./TodoList');
 let TodoRoute = require('./TodoRoute');
 
-let TodoApp = React.createClass({
-  _changeHandle: function() {
-    this.setState({items: TodoStore.getItems()});
-  },
-  getInitialState: function() {
-    return {items: TodoStore.getItems()};
-  },
-  componentDidMount: function() {
-    TodoStore.on('change', this._changeHandle);
-  },
-  componentWillUnmount: function() {
-    TodoStore.removeListener('change', this._changeHandle);
-  },
-  render: function() {
-    let router = this.props.params.router || 'all';
+
+class Todo extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
     return (
       <div>
-        <TodoInput />
-        <TodoList items={this.state.items} />
-        <TodoRoute count={this.state.items.length} now={router} />
+        <TodoInput addTodo={this.props.addTodo} />
+        <TodoList items={this.props.todos} />
+        <TodoRoute count={this.props.todos.length} now={this.props.now} />
       </div>
-    )
+    );
   }
-});
+}
 
-module.exports = TodoApp;
+module.exports = Todo;

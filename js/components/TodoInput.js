@@ -1,25 +1,27 @@
 'use strict';
 let React = require('react');
-let TodoAction = require('../actions/TodoAction');
-let guid = require('../utils/util').guid;
 
-let TodoInput = React.createClass({
-  handleChange: function(e) {
-    let text;
-    if (e.keyCode === 13) {
-      text = React.findDOMNode(this.refs.item).value.trim();
-      React.findDOMNode(this.refs.item).value = '';
-      text && TodoAction.add({id: guid(), text: text, completed: false});
-    }
-  },
-  render: function() {
+class TodoInput extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    // let _this = this;
     return (
       <header className="todo__header">
         <h1>todos</h1>
-        <input className="todo__new" ref="item" onKeyUp={this.handleChange} />
+        <input className="todo__new" ref="item" onKeyUp={this._handleChange.bind(this)} />
       </header>
     );
   }
-});
+  _handleChange(e) {
+    // console.log(this);
+    if (e.keyCode === 13) {
+      let text = React.findDOMNode(this.refs.item).value.trim();
+      React.findDOMNode(this.refs.item).value = '';
+      text && this.props.addTodo(text);
+    }
+  }
+}
 
 module.exports = TodoInput;

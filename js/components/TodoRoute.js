@@ -2,8 +2,11 @@
 let React = require('react');
 let cx = require('../utils/util').cx;
 
-let TodoRoute = React.createClass({
-  render: function() {
+class TodoRoute extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
     return (
       <footer className="todo__footer">
         <span id="todo-count">
@@ -37,9 +40,7 @@ let TodoRoute = React.createClass({
       </footer>
     );
   }
-    
-});
-
+}
 
 
 module.exports = TodoRoute;

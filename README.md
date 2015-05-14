@@ -9,6 +9,8 @@ webpack-dev-server
 ```
 
 #Todoish
+- Container
+[Container Components](https://medium.com/@learnreact/container-components-c0e67432e005)
 - Router
 [react-router](https://github.com/rackt/react-router)
 or DIY

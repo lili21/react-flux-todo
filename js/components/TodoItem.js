@@ -32,7 +32,7 @@ let TodoItem = React.createClass({
         <div className="todo__view">
           <input type="checkbox" className="toggle" checked={this.props.item.completed} onChange={this._toggleCompleted.bind(this, this.props.index)}/>
           <label onDoubleClick={this._editing}>{this.props.item.text}</label>
-          <button className="destroy" onClick={this._remove.bind(this, this.props.index)}></button>
+          <button className="destroy" onClick={this.props.remove.bind(this, this.props.index)}></button>
         </div>
         <input className="todo__edit" defaultValue={this.props.item.text}  onKeyUp={this._change.bind(this, this.props.index)}/>
       </li>
