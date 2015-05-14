@@ -6,7 +6,6 @@ class TodoInput extends React.Component {
     super(props);
   }
   render() {
-    // let _this = this;
     return (
       <header className="todo__header">
         <h1>todos</h1>
@@ -15,7 +14,6 @@ class TodoInput extends React.Component {
     );
   }
   _handleChange(e) {
-    // console.log(this);
     if (e.keyCode === 13) {
       let text = React.findDOMNode(this.refs.item).value.trim();
       React.findDOMNode(this.refs.item).value = '';

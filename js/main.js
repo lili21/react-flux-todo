@@ -2,9 +2,9 @@
 
 require('../css/style.css');
 let React = require('react');
-let TodoContainer = require('./components/TodoContainer');
-
 let TodoAction = require('./actions/TodoAction');
+
+
 
 
 
@@ -32,14 +32,9 @@ global.addEventListener('hashchange', () => {
 
 let Router = require('react-router');
 let {Route, DefaultRoute, RouteHandler} = Router;
-/*
-let App = React.createClass({
-  render: function() {
-    return (
-      <RouteHandler />
-    )
-  }
-});*/
+
+let Todo = require('./components/Todo');
+
 class App extends React.Component {
   constructor() {
     super();
@@ -53,8 +48,8 @@ class App extends React.Component {
 
 let routes = (
   <Route path="/" handler={App}>
-    <Route path="/:router" handler={TodoContainer}></Route>
-    <DefaultRoute handler={TodoContainer} />
+    <Route path="/:router" handler={Todo}></Route>
+    <DefaultRoute handler={Todo} />
   </Route>
 );
 

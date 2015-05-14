@@ -2,7 +2,7 @@
 let React = require('react');
 let cx = require('../utils/util').cx;
 
-class TodoRoute extends React.Component {
+class TodoFooter extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -42,5 +42,4 @@ class TodoRoute extends React.Component {
   }
 }
 
-
-module.exports = TodoRoute;
+module.exports = TodoFooter;
