@@ -3,6 +3,7 @@ let TodoAction = require('../actions/TodoAction');
 let TodoStore = require('../stores/TodoStore');
 
 let TodoList = require('./TodoList');
+let TodoFooter = require('./TodoFooter');
 
 class TodoListContainer extends React.Component {
   constructor() {
@@ -21,7 +22,10 @@ class TodoListContainer extends React.Component {
   }
   render() {
     return (
-      <TodoList items={this.state.todos} />
+      <div>
+        <TodoList items={this.state.todos} />
+        <TodoFooter count={this.state.todos.length} now={this.props.now} />
+      </div>
     );
   }
   _updateState() {

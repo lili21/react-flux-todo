@@ -15,7 +15,7 @@ class Todo extends React.Component {
     return (
       <div>
         <TodoInputContainer />
-        <TodoListContainer />
+        <TodoListContainer now={this.props.params.router || 'all'} />
       </div>
     );
   }
