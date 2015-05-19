@@ -21,4 +21,12 @@ class Todo extends React.Component {
   }
 }
 
+Todo.propTypes = {
+  params: React.PropTypes.object
+};
+
+Todo.defaultProps = {
+  params: {}
+};
+
 module.exports = Todo;

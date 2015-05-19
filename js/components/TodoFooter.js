@@ -5,6 +5,7 @@ let cx = require('../utils/util').cx;
 class TodoFooter extends React.Component {
   constructor(props) {
     super(props);
+    // super();  
   }
   render() {
     return (
@@ -41,5 +42,14 @@ class TodoFooter extends React.Component {
     );
   }
 }
+
+TodoFooter.propTypes = {
+  count: React.PropTypes.number,
+  now: React.PropTypes.string
+};
+TodoFooter.defaultProps = {
+  count: 0,
+  now: 'all'
+};
 
 module.exports = TodoFooter;

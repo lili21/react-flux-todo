@@ -22,4 +22,12 @@ class TodoInput extends React.Component {
   }
 }
 
+TodoInput.propTypes = {
+  addTodo: React.PropTypes.func
+};
+
+TodoInput.defaultProps = {
+  addTodo: () => {}
+};
+
 module.exports = TodoInput;

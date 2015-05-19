@@ -30,4 +30,21 @@ class TodoItem extends React.Component {
     }
   }
 }
+
+TodoItem.propTypes = {
+  item: React.PropTypes.object,
+  index: React.PropTypes.number,
+  toggleCompleted: React.PropTypes.func,
+  removeTodo: React.PropTypes.func,
+  updateTodo: React.PropTypes.func
+};
+
+TodoItem.defaultProps = {
+  item: {},
+  index: 0,
+  toggleCompleted: () => {},
+  removeTodo: () => {},
+  updateTodo: () => {}
+};
+
 module.exports = TodoItem;

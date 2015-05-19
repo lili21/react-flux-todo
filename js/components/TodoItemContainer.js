@@ -23,4 +23,14 @@ class TodoItemContainer extends React.Component {
   }
 }
 
+TodoItemContainer.propTypes = {
+  item: React.PropTypes.object,
+  index: React.PropTypes.number
+};
+
+TodoItemContainer.defaultProps = {
+  item: {},
+  index: 0
+};
+
 module.exports = TodoItemContainer;
