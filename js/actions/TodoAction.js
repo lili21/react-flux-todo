@@ -11,6 +11,7 @@ let TodoAction = {
     });
     TodoWebApi.addTodo(item);
   },
+
   receiveAll: function(type) {
     let todos = TodoWebApi.getAllTodos(type);
     TodoDispatcher.dispatch({
@@ -18,6 +19,7 @@ let TodoAction = {
       todos: todos
     });
   },
+
   remove: function(index) {
     TodoDispatcher.dispatch({
       eventName: 'remove',
@@ -25,6 +27,7 @@ let TodoAction = {
     });
     TodoWebApi.removeTodo(index);
   },
+
   toggleCompleted: function(index) {
     TodoDispatcher.dispatch({
       eventName: 'toggleCompleted',
@@ -32,6 +35,7 @@ let TodoAction = {
     });
     TodoWebApi.toggleCompleted(index);
   },
+
   update: function(index, text) {
     TodoDispatcher.dispatch({
       eventName: 'update',

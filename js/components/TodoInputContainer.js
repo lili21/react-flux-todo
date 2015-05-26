@@ -1,3 +1,4 @@
+'use strict';
 let React = require('react');
 let TodoAction = require('../actions/TodoAction');
 let guid = require('../utils/util').guid;

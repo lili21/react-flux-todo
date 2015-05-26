@@ -1,3 +1,4 @@
+'use strict';
 let React = require('react');
 let TodoStore = require('../stores/TodoStore');
 let TodoAction = require('../actions/TodoAction');

@@ -10,6 +10,7 @@ util.cx = classNames => {
       if (!classNames.hasOwnProperty(name) || !classNames[name]) {
         continue;
       }
+
       names += name + ' ';
     }
   } else {
@@ -19,6 +20,7 @@ util.cx = classNames => {
       if (arguments[i] == null) {
         continue;
       }
+
       names += arguments[i] + ' ';
     }
   }
@@ -31,7 +33,8 @@ util.guid = () => {
     return Math.floor((1 + Math.random()) * 0x10000)
       .toString(16)
       .substring(1);
-  }
+  };
+
   return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
     s4() + '-' + s4() + s4() + s4();
 };
