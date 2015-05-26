@@ -1,0 +1,26 @@
+{
+  "browser": true,
+
+  "esnext": true,
+  "bitwise": true,
+  "boss": true,
+  "curly": true,
+  "devel": true,
+  "eqnull": true,
+  "expr": true,
+  "funcscope": true,
+  "globalstrict": true,
+  "loopfunc": true,
+  "newcap": false,
+  "noempty": true,
+  "nonstandard": true,
+  "sub": false,
+  "undef": true,
+  "unused": "vars",
+
+  "globals": {
+    "exports": false,
+    "module": false,
+    "require": false
+  }
+}

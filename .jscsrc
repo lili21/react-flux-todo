@@ -1,0 +1,6 @@
+{
+  "preset": "airbnb",
+  "requireCamelCaseOrUpperCaseIdentifiers": null,
+  "esprima": "esprima-fb",
+  "esnext": true
+}
