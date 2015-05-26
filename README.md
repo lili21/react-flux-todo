@@ -19,6 +19,10 @@ webpack-dev-server
 - Flux
 [reflux](https://github.com/spoike/refluxjs)
 [alt](http://alt.js.org)
+[fluxible](http://fluxible.io)
+
+- Store
+[baobab](https://github.com/Yomguithereal/baobab)
 
 - ImmutableJS
 or Object.freeze ???
@@ -39,6 +43,7 @@ or Object.freeze ???
 * [React Tips and Best Practices](http://aeflash.com/2015-02/react-tips-and-best-practices.html)
 
 ##Flux
+* [Flux in Depth.Overview and Components](http://blog.mgechev.com/2015/05/15/flux-in-depth-overview-components/)
 * [Flux For Stupid People](http://blog.andrewray.me/flux-for-stupid-people/)
 * [The Case for Flux](https://medium.com/@dan_abramov/the-case-for-flux-379b7d1982c6)
 * [Those Who Forget The Past](https://speakerdeck.com/jmorrell/jsconf-uy-flux-those-who-forget-the-past-dot-dot-dot-1)
