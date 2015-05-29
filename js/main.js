@@ -61,3 +61,37 @@ Router.run(routes, (Root, state) => {
 });
 
 global.React = React;
+global.P = require('./Adehun.js');
+global.test = function() {
+  function doSomething() {
+    console.log('doSomething(): start');
+    var deferred = P.deferred();
+    setTimeout(function() {
+      console.log('doSomething(): end');
+      deferred.resolve();
+    }, 1000);
+    return deferred.promise;
+  }
+
+  function doSomethingElse() {
+    console.log('doSomethingElse(): start');
+    var deferred = P.deferred();
+    setTimeout(function() {
+      console.log('doSomethingElse: end');
+      deferred.resolve();
+    }, 1000);
+    return deferred.promise;
+  }
+
+  function finalHandler() {
+    console.log('finalHandler(): start');
+    var deferred = P.deferred();
+    setTimeout(function() {
+      console.log('finalHandler(): end');
+      deferred.resolve();
+    }, 1000);
+    return deferred.promise;
+  }
+  doSomething().then(doSomethingElse).then(finalHandler);
+}
+
